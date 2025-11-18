@@ -38,14 +38,13 @@ A aplicação possui endpoints para **criação, listagem e gerenciamento de pro
 
 ```bash
 /DoceSim
-├── cmd
-│   └── main.go
 ├── db
 │   └── conn.go
-├── product
-│   ├── controller.go
-│   ├── usecase.go
-│   └── entity.go
+├── model
+│   └── product.go
+├── controller
+|   └── product_controller.go
+├── main.go
 ├── docker-compose.yml
 ├── go.mod
 └── README.md
