@@ -6,7 +6,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: steve3571
       MYSQL_DATABASE: docesim_db
-      MYSQL_USER: root
+      MYSQL_USER: root_docker
       MYSQL_PASSWORD: steve3571
     ports:
       - "3306:3306"
