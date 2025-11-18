@@ -19,9 +19,7 @@ A aplicação possui endpoints para **criação, listagem e gerenciamento de pro
 - ✔️ Migrations automáticas via GORM
 
 ---
-- **Controller**: recebe requisições HTTP  
-- **UseCase / Service**: regra de negócio  
-- **Repository**: acesso ao banco via GORM  
+- **Controller**: recebe requisições HTTP 
 - **Database**: conexão com MySQL via Docker  
 
 ---
@@ -38,7 +36,7 @@ A aplicação possui endpoints para **criação, listagem e gerenciamento de pro
 
 ```bash
 /DoceSim
-├── db
+├── database
 │   └── conn.go
 ├── model
 │   └── product.go
@@ -127,9 +125,9 @@ docker logs docesim
 
 ``` json
 {
-  "name": "Produto Teste",
-  "description": "Produto Teste",
-  "value": 49.90
+    "name": "Brigadeiro",
+    "description": "Feito com chocolate e coco ralado",
+    "value": 10
 }
 ```
 
@@ -142,14 +140,19 @@ docker logs docesim
 **Exemplo de Resposta:**
 
 ``` json
-[
-  {
-    "id": 1,
-    "name": "Produto Teste",
-    "price": 49.9,
-    "createdAt": "2025-11-18T02:51:00Z"
-  }
-]
+{
+    "products": [
+        {
+            "ID": 1,
+            "CreatedAt": "2025-11-18T19:02:04.185-03:00",
+            "UpdatedAt": "2025-11-18T19:02:04.185-03:00",
+            "DeletedAt": null,
+            "name": "Beijinho",
+            "description": "Feito com leite condensado e coco ralado",
+            "value": 8.5
+        }
+    ]
+}
 ```
 
 ------------------------------------------------------------------------
